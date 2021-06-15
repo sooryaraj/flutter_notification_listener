@@ -20,6 +20,7 @@ class NotificationEvent {
     this.text,
     this.message,
     this.timestamp,
+    this.extra
   });
 
   factory NotificationEvent.fromMap(Map<dynamic, dynamic> map) {
@@ -30,7 +31,8 @@ class NotificationEvent {
       title: map['title'],
       text: map['text'],
       message: map["message"],
-      timestamp: map["timestamp"]
+      timestamp: map["timestamp"],
+      extra:map["extra"]
     ).._data = map;
   }
 
