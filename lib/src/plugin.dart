@@ -100,7 +100,7 @@ void callbackDispatcher() {
         case "sink_event": {
           final List<dynamic> args = call.arguments;
           final evt = NotificationEvent.fromMap(args[1]);
-          print("This event result from plugin : ${evt}");
+          print("This event result from plugin : ${args[0]}");
 
           final Function callback = PluginUtilities.getCallbackFromHandle(
               CallbackHandle.fromRawHandle(args[0]));
